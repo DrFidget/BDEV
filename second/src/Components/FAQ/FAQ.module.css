@@ -1,0 +1,7 @@
+.hov {
+    background-color: #2d2d2d;
+  }
+  
+  .hov:hover {
+    background-color: #505050;
+  }
