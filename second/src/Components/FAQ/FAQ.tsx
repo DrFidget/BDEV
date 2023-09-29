@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./FAQ.module.css";
 export const FAQ = () => {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import bgimg from "../../assets/netflixteaser.png";
 import netflix from "../../assets/ntflix.png";
 const bgimage = {
