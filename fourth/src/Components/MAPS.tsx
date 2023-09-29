@@ -1,6 +1,5 @@
-import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+import L, { LatLngExpression } from "leaflet"; // Import LatLngExpression type
 import "leaflet/dist/leaflet.css";
 import markericon from "../assets/placeholder.png";
 
@@ -24,7 +23,11 @@ export const MAPS = () => {
       >
         <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {markers.map((marker, index) => (
-          <Marker key={index} position={marker.geocode} icon={customIcon}>
+          <Marker
+            key={index}
+            position={marker.geocode as LatLngExpression} // Use LatLngExpression type
+            icon={customIcon}
+          >
             <Popup>{marker.popup}</Popup>
           </Marker>
         ))}
